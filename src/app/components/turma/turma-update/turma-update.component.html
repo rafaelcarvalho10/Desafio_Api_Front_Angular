@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-title>Alterar Turma</mat-card-title>
+
+      <form [formGroup]="turmaForm" (ngSubmit)="save()" class="form" #form="ngForm">
+      <mat-form-field class="id">
+          <input matInput placeholder="id" appearance="outline" type="string"
+                                                          formControlName="id">
+        </mat-form-field>
+        <mat-form-field class="form">
+          <input matInput placeholder="Codigo"  appearance="outline" type="string"
+                                                     formControlName="codigo">
+      </mat-form-field>
+        <mat-form-field class="form">
+          <input matInput placeholder="Nome" appearance="outline" type="string"
+                                                  formControlName="nome">
+        </mat-form-field>
+        <mat-form-field class="form">
+          <input matInput placeholder="Escola" appearance="outline" type="string"
+                                                  formControlName="escolaId">
+        </mat-form-field>
+      </form>
+
+<button mat-raised-button (click)="save()" color="primary">
+  Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()" color="red">
+  Cancelar
+</button>
+</mat-card>

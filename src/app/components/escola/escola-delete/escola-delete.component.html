@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>Excluir Escola</mat-card-title>
+
+  <form [formGroup]="escolaForm" (ngSubmit)="deleteEscola()" class="form" #form="ngForm">
+    <!-- <input type="hidden" formControleNome="id"> -->
+    <mat-form-field class="id">
+      <input matInput placeholder="id" appearance="outline"
+                                                      formControlName="id">
+    </mat-form-field >
+    <mat-form-field>
+      <input matInput placeholder="codigo" appearance="outline"
+                                                      formControlName="codigo">
+    </mat-form-field >
+    <mat-form-field class="form">
+      <input matInput placeholder="nome" appearance="outline"
+                                                    formControlName="nome">
+    </mat-form-field>
+  </form>
+
+
+  <button mat-raised-button (click)="deleteEscola()" color="warn">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()" color="red">
+    Cancelar
+  </button>
+</mat-card>
+<samp></samp>
